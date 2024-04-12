@@ -1,0 +1,52 @@
+[0m14:14:38.077059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040c5d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105870eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10587f850>]}
+
+
+============================== 14:14:38.084498 | 7d292294-c62f-4486-93ae-a7d1d6db6ba9 ==============================
+[0m14:14:38.084498 [info ] [MainThread]: Running with dbt=1.5.10
+[0m14:14:38.084979 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/unknowntpo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m14:14:44.623031 [error] [MainThread]: Encountered an error:
+
+[0m14:14:44.625911 [error] [MainThread]: Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/cli/main.py", line 475, in init
+    results = task.run()
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 288, in run
+    project_name = self.get_valid_project_name()
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.5.10/libexec/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:14:44.626930 [debug] [MainThread]: Command `dbt init` failed at 14:14:44.626740 after 6.57 seconds
+[0m14:14:44.627338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040c5d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058ac3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058ac070>]}
+[0m14:14:44.627584 [debug] [MainThread]: Flushing usage events
+[0m14:16:45.692074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110586dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113538f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135380d0>]}
+
+
+============================== 14:16:45.696564 | abfa53c1-084a-4c38-9cb2-330279b17927 ==============================
+[0m14:16:45.696564 [info ] [MainThread]: Running with dbt=1.5.10
+[0m14:16:45.696997 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/unknowntpo/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/unknowntpo/repo/unknowntpo/playground-2022/dataops/dbt_tutorial/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m14:16:45.730592 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "dbt_tutorial", target "dev" invalid: ['dbname'] is not of type 'string'
+[0m14:16:45.731698 [debug] [MainThread]: Command `dbt list` failed at 14:16:45.731316 after 0.06 seconds
+[0m14:16:45.732468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110586dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136344c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136340a0>]}
+[0m14:16:45.733120 [debug] [MainThread]: Flushing usage events
+[0m14:18:52.663586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103705760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc0ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc03a0>]}
+
+
+============================== 14:18:52.666604 | 0f36c31e-5887-44e8-86c8-d14c74d437de ==============================
+[0m14:18:52.666604 [info ] [MainThread]: Running with dbt=1.5.10
+[0m14:18:52.667003 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/unknowntpo/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/unknowntpo/repo/unknowntpo/playground-2022/dataops/dbt_tutorial/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m14:18:52.692399 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "dbt_tutorial", target "dev" invalid: ['dbname'] is not of type 'string'
+[0m14:18:52.693102 [debug] [MainThread]: Command `dbt test` failed at 14:18:52.692895 after 0.05 seconds
+[0m14:18:52.693317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103705760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dba100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dba1c0>]}
+[0m14:18:52.693538 [debug] [MainThread]: Flushing usage events
